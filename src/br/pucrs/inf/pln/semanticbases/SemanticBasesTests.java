@@ -1,12 +1,14 @@
 package br.pucrs.inf.pln.semanticbases;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 class SemanticBasesTests {
 
@@ -22,7 +24,7 @@ class SemanticBasesTests {
 		
 		new File(RelationsFile.FILE_NAME).delete();
 	}
-	
+
 	private BaseSemantica mockBaseSemantica() {
 		BaseSemantica base = new BaseSemantica();
 		base.Hiponimos = mockHiponimos();
